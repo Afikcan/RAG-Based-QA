@@ -31,3 +31,12 @@ def create_bge_m3_embeddings_for_pdf(url):
     embeddings = generate_bge_m3_embeddings(chunks, tokenizer, model)
 
     return embeddings, chunks
+
+def create_bge_m3_embeddings_for_query(query):
+    #Load the BGE-M3 model
+    tokenizer, model = load_bge_m3_model()
+
+    #Generate embeddings for each chunk using BGE-M3
+    embeddings = generate_bge_m3_embeddings([query], tokenizer, model)
+
+    return embeddings, query
