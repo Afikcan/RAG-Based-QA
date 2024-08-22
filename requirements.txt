@@ -6,6 +6,5 @@ Requests==2.32.3
 torch==2.3.0
 transformers==4.44.1
 fastapi==0.103.0
-mangum==0.17.0
 uvicorn==0.30.6
 requests==2.32.3
