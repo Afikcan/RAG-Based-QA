@@ -5,7 +5,6 @@ from pinecone_utils import setup_and_index_embeddings, query_pinecone_index, ind
 
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
-from mangum import Mangum
 
 """
 uvicorn main:app --reload
@@ -25,8 +24,6 @@ class QueryRequest(BaseModel):
     query: str
 
 app = FastAPI()
-
-handler = Mangum(app)
 
 # Initialize Pinecone index
 index = None
