@@ -1,4 +1,4 @@
-# RAG-Based Question-Answering System Documentation
+# RAG-Based Question-Answering System
 
 ## Overview
 
