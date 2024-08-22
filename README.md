@@ -92,7 +92,7 @@ json
 
 The API can be deployed using Docker container and AWS ECS. Here's a simple deployment guide:
 
-Running Locally
+### Running Locally
 
 To run the API locally:
 ```
@@ -101,7 +101,7 @@ uvicorn main:app --reload
 
 This will start the API on http://127.0.0.1:8000.
 
-Docker Deployment
+### Docker Deployment
 
 Build Docker Image:
 ```
