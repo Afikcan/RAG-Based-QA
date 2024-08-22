@@ -118,8 +118,6 @@ After building your Docker image locally, the first step is to push this image t
 Commands:
 
 ```bash
-
-docker login
 docker tag local-image:tagname afique/rag-based-qa:latest
 docker push afique/rag-based-qa:latest
 ```
@@ -130,8 +128,8 @@ A Task Definition in AWS ECS is like a blueprint for your application. It define
 
 Why create a Task Definition?
 
-    It encapsulates the configuration needed to run containers in AWS ECS.
-    It allows you to manage and version the deployment configuration, enabling easy updates and rollbacks.
+- It encapsulates the configuration needed to run containers in AWS ECS.
+- It allows you to manage and version the deployment configuration, enabling easy updates and rollbacks.
 
 Example Task Definition:
 ```
@@ -174,7 +172,7 @@ An ECS Cluster is a logical grouping of tasks or services. When you create a ser
 
 Why create a Cluster?
 
-    It provides a management layer for running your containerized applications across multiple EC2 instances or using Fargate.
+- It provides a management layer for running your containerized applications across multiple EC2 instances or using Fargate.
 
 ### Step 4: Create a Service in the ECS Cluster
 
@@ -182,8 +180,8 @@ Next, create a service in your ECS cluster using the task definition. This servi
 
 Why create a Service?
 
-    It ensures high availability and reliability by maintaining the desired number of task instances.
-    It provides load balancing and auto-scaling capabilities.
+- It ensures high availability and reliability by maintaining the desired number of task instances.
+- It provides load balancing and auto-scaling capabilities.
 
 ### Step 5: Adjust Security Group Inbound Rules
 
@@ -191,7 +189,7 @@ To allow external access to your API, you need to modify the inbound rules of th
 
 Why adjust Security Group Inbound Rules?
 
-    To enable your API to receive requests from outside the AWS environment, making it accessible over the internet.
+- To enable your API to receive requests from outside the AWS environment, making it accessible over the internet.
 
 ### Step 6: Access the API
 
