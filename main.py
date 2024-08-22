@@ -2,9 +2,10 @@ from dotenv import load_dotenv
 import os
 from embedding import create_bge_m3_embeddings_for_pdf, create_bge_m3_embeddings_for_query
 from pinecone_utils import setup_and_index_embeddings, query_pinecone_index, index_embeddings
-import numpy as np
+
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
+from mangum import Mangum
 
 """
 uvicorn main:app --reload
@@ -25,6 +26,7 @@ class QueryRequest(BaseModel):
 
 app = FastAPI()
 
+handler = Mangum(app)
 
 # Initialize Pinecone index
 index = None
